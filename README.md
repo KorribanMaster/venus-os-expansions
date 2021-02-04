@@ -7,7 +7,7 @@ Next add a rule similar to [this](./gsm/gsm.rules)
 
 ## GSM
 
-To connect to the mobile network a sim card is required. Research your APN on the internet. Put [./gsm/gprs] into */etc/pppd/peers/*
+To connect to the mobile network a sim card is required. Research your APN on the internet. Put [gprs](./gsm/gprs) into */etc/pppd/peers/*
 
 ``` bash
 # Establish connection
@@ -34,3 +34,5 @@ To get a Fix it might take a long while (+10 min) to improve that yo can use [as
 ## GPS + GSM
 
 tbd.
+
+[![Built with Spacemacs](https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg)](http://spacemacs.org)
