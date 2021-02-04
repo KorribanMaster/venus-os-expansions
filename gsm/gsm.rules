@@ -1,0 +1,2 @@
+# Programmed Serial adapter with custom ID GSM_GPRS_GNSS_HAT
+ACTION=="add", ENV{ID_BUS}=="usb", ENV{ID_MODEL}=="GSM_GPRS_GNSS_HAT",          ENV{VE_SERVICE}="ignore"

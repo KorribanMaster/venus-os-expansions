@@ -1,0 +1,2 @@
+#!/bin/sh
+/data/scripts/connect-gsm.sh
