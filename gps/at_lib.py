@@ -1,5 +1,6 @@
 import logging
 
+
 def at_communicate(ser, cmd, expect=None):
     if not cmd.endswith("\r\n"):
         cmd = cmd.join("\r\n")
