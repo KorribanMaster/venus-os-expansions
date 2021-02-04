@@ -16,7 +16,7 @@ from at_lib import at_communicate, init_gps
 from time import sleep
 
 # our own packages
-sys.path.insert(1, os.path.join(os.path.dirname(__file__), './ext'))
+sys.path.insert(1, os.path.join(os.path.dirname(__file__), '../velib_python'))
 from vedbus import VeDbusService
 
 
@@ -44,6 +44,7 @@ class DbusGpsService:
         for path, settings in self._paths.iteritems():
             self._dbusservice.add_path(
                 path, settings['initial'], writeable=True, onchangecallback=self._handlechangedvalue)
+        serial.Serial()
         self.ser = serial.Serial("/dev/ttyUSB0", 115200)
         self.ser.timeout = 0
         self.ser.flushInput()

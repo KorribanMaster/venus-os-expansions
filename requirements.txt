@@ -1,2 +1,2 @@
 pynmea2
-serial
+pyserial
