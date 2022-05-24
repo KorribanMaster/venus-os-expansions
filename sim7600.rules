@@ -1,0 +1,16 @@
+ACTION=="add", ENV{ID_BUS}=="usb", ENV{ID_VENDOR_ID}=="1e0e", ENV{ID_MODEL_ID}=="9011", GOTO="modem"
+GOTO="end-modem"
+
+LABEL="modem"
+
+# ignore devices in serial-starter
+ENV{VE_SERVICE}="ignore"
+
+# let serial-starter handle gps and modem control
+ENV{ID_USB_INTERFACE_NUM}=="03", ENV{VE_SERVICE}="gps"
+ENV{ID_USB_INTERFACE_NUM}=="04", ENV{VE_SERVICE}="modem"
+
+# link modem interface to a known name
+ENV{ID_USB_INTERFACE_NUM}=="05", SYMLINK+="modem"
+
+LABEL="end-modem"
