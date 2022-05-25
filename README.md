@@ -6,7 +6,6 @@ This repo is a collection of expansions for the [venus-os](https://github.com/Ko
 
 The [sim800](https://www.waveshare.com/wiki/SIM800C_GSM/GPRS_HAT) raspberry pi hat from waveshare was my first shot at adding gsm+gps to the venus os. However due too the single serial interface i only got either gsm or gps working never both at the same time
 
-[![Built with Spacemacs](https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg)](http://spacemacs.org)
 
 # sim7600
 
@@ -19,3 +18,5 @@ The ads1115 is an adc with 4 channels atached to the i2c interface. The goal wou
 # relay
 
 This aims at making up to four relays available in the gui to control via the raspberry py gpios
+
+[![Built with Spacemacs](https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg)](http://spacemacs.org)
