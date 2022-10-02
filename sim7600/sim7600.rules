@@ -1,3 +1,7 @@
+# Simcom GSM/3G modem
+
+ACTION=="add", ENV{ID_BUS}=="usb", ENV{ID_VENDOR_ID}=="05c6", ENV{ID_MODEL_ID}=="9000", GOTO="modem"
+ACTION=="add", ENV{ID_BUS}=="usb", ENV{ID_VENDOR_ID}=="1e0e", ENV{ID_MODEL_ID}=="9001", GOTO="modem"
 ACTION=="add", ENV{ID_BUS}=="usb", ENV{ID_VENDOR_ID}=="1e0e", ENV{ID_MODEL_ID}=="9011", GOTO="modem"
 GOTO="end-modem"
 
@@ -7,10 +11,10 @@ LABEL="modem"
 ENV{VE_SERVICE}="ignore"
 
 # let serial-starter handle gps and modem control
-ENV{ID_USB_INTERFACE_NUM}=="03", ENV{VE_SERVICE}="gps"
-ENV{ID_USB_INTERFACE_NUM}=="04", ENV{VE_SERVICE}="modem"
+ENV{ID_USB_INTERFACE_NUM}=="01", ENV{VE_SERVICE}="gps"
+ENV{ID_USB_INTERFACE_NUM}=="02", ENV{VE_SERVICE}="modem"
 
 # link modem interface to a known name
-ENV{ID_USB_INTERFACE_NUM}=="05", SYMLINK+="modem"
+ENV{ID_USB_INTERFACE_NUM}=="03", SYMLINK+="modem"
 
 LABEL="end-modem"
