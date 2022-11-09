@@ -4,6 +4,7 @@
 
 ``` bash
 # ssh into venus
+opkg install git
 cd /data
 git clone https://github.com/KorribanMaster/venus-os-expansions.git
 cd venus-os-expansions
